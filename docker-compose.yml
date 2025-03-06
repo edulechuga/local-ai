@@ -1,6 +1,6 @@
 volumes:
   n8n_storage:
-  postgres_n8n_storage:
+  postgres_storage:
   ollama_storage:
   qdrant_storage:
   open-webui:
