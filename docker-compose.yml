@@ -111,6 +111,10 @@ services:
         condition: service_healthy
       n8n-import:
         condition: service_completed_successfully
+      environment:
+        GENERIC_TIMEZONE=America/Sao_Paulo
+        N8N_SECURE_COOKIE=false
+        
   qdrant:
     image: qdrant/qdrant
     container_name: qdrant
