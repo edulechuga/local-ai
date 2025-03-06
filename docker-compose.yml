@@ -100,6 +100,7 @@ services:
     <<: *service-n8n
     container_name: n8n
     restart: unless-stopped
+    N8N_SECURE_COOKIE=false
     ports:
       - 5678:5678
     volumes:
