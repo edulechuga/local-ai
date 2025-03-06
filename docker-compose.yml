@@ -1,6 +1,6 @@
 volumes:
   n8n_storage:
-  postgres_storage:
+  postgres_n8n_storage:
   ollama_storage:
   qdrant_storage:
   open-webui:
@@ -67,7 +67,7 @@ services:
     restart: unless-stopped
     container_name: open-webui-pack
     ports:
-      - "3000:8080"
+      - "3002:8080"
     extra_hosts:
       - "host.docker.internal:host-gateway"
     volumes:
@@ -78,7 +78,7 @@ services:
     networks: ['demo']
     restart: unless-stopped
     ports:
-      - 5432:5432
+      - 5433:5433
     environment:
       - POSTGRES_USER
       - POSTGRES_PASSWORD
